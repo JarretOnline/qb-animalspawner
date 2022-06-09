@@ -21,17 +21,17 @@ or IsEntityInZone(player, "TONGVAH")
 or IsEntityInZone(player, "PALHIGH"))
 and #entities < 8 then--how many animals to spawn
 
-RequestModel("a_c_deer") --model of animal, this is a deer (OBVIOUSLY xD).
+RequestModel("a_c_deer") --model of animal, this is a deer
 while not HasModelLoaded("a_c_deer") or not HasCollisionForModelLoaded("a_c_deer") do
 Wait(1)
 end		
 
-RequestModel("a_c_mtlion") --model of animal, this is a deer (OBVIOUSLY xD).
+RequestModel("a_c_mtlion") --model of animal, this is a mountain lion
 while not HasModelLoaded("a_c_mtlion") or not HasCollisionForModelLoaded("a_c_mtlion") do
 Wait(1)
 end		
 
-RequestModel("a_c_rabbit_01") --model of animal, this is a deer (OBVIOUSLY xD).
+RequestModel("a_c_rabbit_01") --model of animal, this is a rabbit 
 while not HasModelLoaded("a_c_rabbit_01") or not HasCollisionForModelLoaded("a_c_rabbit_01") do
 Wait(1)
 end	
@@ -54,8 +54,8 @@ TaskWanderStandard(ped, 10.0, 10)
 			table.insert(entities,ped)
 
 local blip = AddBlipForEntity(ped)
-SetBlipSprite(blip,0) --if you want the animals to have blips or change to 0 for none
-SetBlipColour(blip,80)
+SetBlipSprite(blip,0) --animal blips (141) or  (0) for none
+SetBlipColour(blip,80) -- transparent on map
 BeginTextCommandSetBlipName("STRING")
 AddTextComponentString("spawned entity")
 EndTextCommandSetBlipName(blip)       			   
